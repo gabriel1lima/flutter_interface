@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class CardItem extends StatelessWidget {
   final String imageIcon;
 
+  final String title;
+
   final bool isSelected;
 
-  CardItem(this.imageIcon, this.isSelected);
+  CardItem(this.imageIcon, this.title, this.isSelected);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class CardItem extends StatelessWidget {
             height: 10,
           ),
           Text(
-            'Pizza',
+            this.title,
             style: TextStyle(color: Colors.white),
           )
         ],
